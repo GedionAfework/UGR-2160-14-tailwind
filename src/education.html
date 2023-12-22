@@ -1,347 +1,290 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gedion Mekbeb</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gedion Mekbeb</title>
+  <link rel="stylesheet" href="../dist/output.css">
+  <style>
+#education-pictures {
+    display: flex;
+    overflow-x: scroll;
+    margin: 7px;
+    border-radius: 12px;
+}
+#educational-pictures::-webkit-scrollbar{
+    display: none;
+}
+#edu_pic {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10% auto;
+}
+#pictures_slide {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 20px;
+    padding: 10px;
+    flex: none;
+}
+#education-pictures__photo {
+    width: 100%;
+    filter: grayscale(100%);
+    transition: transform 0.5s;
+    object-fit: cover;
+    border-radius: 5%;
+}
+#education-pictures__photo:hover {
+    filter: grayscale(0);
+    cursor: pointer;
+    transform: scale(1.1);
+}
+#back_button{
+    width: 50px;
+    cursor: pointer;
+    margin: 40px;
+}
+#next_button {
+    width: 50px;
+    cursor: pointer;
+    margin: 40px;
+}
+  </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li>
-                    <a href="index.html">
-                        HOME
-                    </a>
-                </li>
-                <li>
-                    <a href="about.html">
-                        ABOUT
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        EDUCATION
-                    </a>
-                </li>
-                <li>
-                    <a href="goals.html">
-                        GOAL
-                    </a>
-                </li>
-                <li>
-                    <a href="experience.html">
-                        EXPERIENCE
-                    </a>
-                </li>
-            </ul>
-        </nav>
-    </header>
-    <hr>
-    <main>
-      <q class="quote">
-        Education is the passport to the future, for tomorrow belongs to those who prepare for it today.
-      </q>
-        <div class="intro-education">
-          <p class="schools-paragraph">
-            In my life, I have learned in three schools. I have loved all the schools I have had amazing times and amazing friends as well. I loved all the times I had in these schools. The schools are:
-          </p>
-          <ol>
-            <li>
-              <a href="https://oliveacademyethiopia.com/" target="_blank">
-                Olive Academy  
-              </a>
-            </li>
-            <li>
-              <a href="https://lidetacatholiccathedral.com/" target="_blank">
-                Lideta Catholic cathedral School
-              </a>
-            </li>
-            <li>
-              <a href="http://www.aait.edu.et/" target="_blank">
-                Addis Ababa University, Addis Ababa Institute of Technology
-              </a>
-            </li>
-          </ol>
-          <br class="schools-paragraph-end">
-          <div class="olive-education">
-            <h2 id="olive">
-              Olive Academy
-            </h2>
-            <img src="../pictures/olive.jpg" alt="Olive Academy">
-            <p class="olive-academy">
-              Olive Academy is a private academy owned by Mr. Abebayehu and Mrs. Konjot. But, back then, the owner was the beautiful Ms. Haimanot. She was an amazing teacher as well as a second mother to me. She was my mom's close friend and she used to buy me a chocolate everyday. I loved her so much that I drew her once. In my stay at Olive, Ms. Haimanot played a huge role.
-            </p>
-            <div class="olive-table">
-              <table>
+  <header>
+    <nav>
+      <ul class="gap-[1vw] font-bold justify-end flex px-5 lg:gap-[4vw] lg:text-lg md:gap-[2vw] md:text-base sm:text-sm">
+            <li><a class="hover:text-gray-500" href="index.html"> HOME </a></li>
+            <li><a class="hover:text-gray-500" href="about.html"> ABOUT </a></li>
+            <li><a class="hover:text-gray-500 underline" href="#"> EDUCATION </a></li>
+            <li><a class="hover:text-gray-500" href="goals.html"> GOAL </a></li>
+            <li><a class="hover:text-gray-500" href="experience.html"> EXPERIENCE </a></li>
+        </ul>  
+    </nav>
+</header>
+<main class="bg-teal-400 text-white">
+    <q class="bg-black px-20 text-2xl font-bold">Education is the passport to the future, for tomorrow belongs to those who prepare for it today.</q>
+      <div class="px-4">
+        <p>In my life, I have learned in three schools. I have loved all the schools I have had amazing times and amazing friends as well. I loved all the times I had in these schools. The schools are:</p>
+        <ol class="px-6 my-0">
+          <li><a class="text-white" href="https://oliveacademyethiopia.com/" target="_blank">Olive Academy</a></li>
+          <li><a class="text-white" href="https://lidetacatholiccathedral.com/" target="_blank">Lideta Catholic cathedral School</a></li>
+          <li><a class="text-white" href="http://www.aait.edu.et/" target="_blank">Addis Ababa University, Addis Ababa Institute of Technology</a></li>
+        </ol>
+        <br>
+        <h2 class="text-4xl font-bold text-black px-5" id="olive">Olive Academy</h2>
+        <div class="grid md:flex lg:flex px-5">
+          <div class="py-5 w-full flex lg:w-2/3">
+            <div class="w-1/2">
+              <img class="mx-0" src="images/olive.jpg" alt="Olive Academy">
+            </div>
+            <div class="w-1/2">
+              <p>Olive Academy is a private academy owned by Mr. Abebayehu and Mrs. Konjot. But, back then, the owner was the beautiful Ms. Haimanot. She was an amazing teacher as well as a second mother to me. She was my mom's close friend and she used to buy me a chocolate everyday. I loved her so much that I drew her once. In my stay at Olive, Ms. Haimanot played a huge role.</p>
+            </div>
+          </div>
+          <div class="w-full md:w-1/3">
+            <div class="w-1/3">
+              <table class="w-60 text-sm text-left">
                 <tr>
-                  <th>
-                    Year
-                  </th>
-                  <th>
-                    Grade
-                  </th>
-                  <th>
-                    Rank
-                  </th>
+                  <th class="border border-slate-600 border-white">Year</th>
+                  <th class="border border-slate-600 border-white">Grade</th>
+                  <th class="border border-slate-600 border-white">Rank</th>
                 </tr>
                 <tr>
-                  <td>
-                    1999
-                  </td>
-                  <td>
-                    Nursery
-                  </td>
-                  <td>
-                    1st
-                  </td>
+                  <td class="border border-slate-600 border-white">1999</td>
+                  <td class="border border-slate-600 border-white">Nursery</td>
+                  <td class="border border-slate-600 border-white">1st</td>
               </tr>
               <tr>
-                <td>
-                  2000
-                </td>
-                <td>
-                  Kg
-                </td>
-                <td>
-                  4th
-                  </td>
+                <td class="border border-slate-600 border-white">2000</td>
+                <td class="border border-slate-600 border-white">Kg</td>
+                <td class="border border-slate-600 border-white">4th</td>
               </tr>
               <tr>
-                <td>
-                  2001
-                </td>
-                <td>
-                  Prep.
-                </td>
-                <td>
-                  2nd
-                </td>
+                <td class="border border-slate-600 border-white">2001</td>
+                <td class="border border-slate-600 border-white">Prep.</td>
+                <td class="border border-slate-600 border-white">2nd</td>
               </tr>
-                </table>
-              </div>
-            </div> 
-            <div class="lccs-first">
-              <h2 id="cathe">
-                Lideta Catholic Cathedral School (First)
-              </h2>
+            </table>
+            </div>
+          </div>
+        </div>
+        <h2 class="text-4xl font-bold text-black px-5" id="cathe">Lideta Catholic Cathedral School (First)</h2>
+        
+        
+        <div class="grid md:flex lg:flex px-5">
+          <div class="py-5 w-full flex lg:w-2/3">
+            <div class="w-1/2">
               <img src="images/cathedral_2.png" alt="Lideta Catholic Cathedral School">
-              <p class="cathedral-first">
-                Because I spent 12 years, I divided it into 2 parts elementary and high school. This one is for the elementary. During the time I spent in elementary, I learned a lot. I had many amazing friends and amazing teachers. Among the amazing teachers, the one I will remamber the is <span class="fikirte"><em><b><i>Teacher Fikirte</i></b></em></span>.
-              </p>
-              <div class="cathe-table">
-                <table>
-                  <tr>
-                    <th>
-                      Year
-                    </th>
-                    <th>
-                      Grade
-                    </th>
-                    <th>
-                      Rank
-                    </th>
-                  </tr>
-                  <tr>
-                    <td>
-                      2002
-                    </td>
-                    <td>
-                      1
-                    </td>
-                    <td>
-                      4th
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      2003
-                    </td>
-                    <td>
-                      2
-                    </td>
-                    <td>
-                      3rd
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      2004
-                    </td>
-                    <td>
-                      3
-                    </td>
-                    <td>
-                      2nd
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      2005
-                    </td>
-                    <td>
-                      4
-                    </td>
-                    <td>
-                      2nd
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      2006
-                    </td>
-                    <td>
-                      5
-                    </td>
-                    <td>
-                      5th
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      2007
-                    </td>
-                    <td>
-                      6
-                    </td>
-                    <td>
-                      3rd
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      2008
-                    </td>
-                    <td>
-                      7
-                    </td>
-                    <td>
-                      2nd
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      2009
-                    </td>
-                    <td>
-                      8
-                    </td>
-                    <td>
-                      National Exam
-                    </td>
-                  </tr>
-                </table>
-              </div>
             </div>
-            <div class="cathe-second">
-              <h2 id="cathe-two">
-                Lideta Catholic Cathedral School (Second)
-              </h2>
+            <div class="w-1/2">
+              <p>Because I spent 12 years, I divided it into 2 parts elementary and high school. This one is for the elementary. During the time I spent in elementary, I learned a lot. I had many amazing friends and amazing teachers. Among the amazing teachers, the one I will remamber the is <span class="fikirte"><em><b><i>Teacher Fikirte</i></b></em></span>.</p>
+            </div>
+          </div>
+          <div class="w-full md:w-1/3">
+            <div class="w-1/3">
+              <table class="w-60 text-sm text-left">
+                <tr> 
+                  <th class="border border-slate-600 border-white">Year</th>
+                  <th class="border border-slate-600 border-white">Grade</th>
+                  <th class="border border-slate-600 border-white">Rank</th>
+                </tr>
+                <tr>
+                  <td class="border border-slate-600 border-white">2002</td>
+                  <td class="border border-slate-600 border-white">1</td>
+                  <td class="border border-slate-600 border-white">4th</td>
+                </tr>
+                <tr>
+                  <td class="border border-slate-600 border-white">2003</td>
+                  <td class="border border-slate-600 border-white">2</td>
+                  <td class="border border-slate-600 border-white">3rd</td>
+                </tr>
+                <tr>
+                  <td class="border border-slate-600 border-white">2004</td>
+                  <td class="border border-slate-600 border-white">3</td>
+                  <td class="border border-slate-600 border-white">2nd</td>
+                </tr>
+                <tr>
+                  <td class="border border-slate-600 border-white">2005</td>
+                  <td class="border border-slate-600 border-white">4</td>
+                  <td class="border border-slate-600 border-white">2nd</td>
+                </tr>
+                <tr>
+                  <td class="border border-slate-600 border-white">2006</td>
+                  <td class="border border-slate-600 border-white">5</td>
+                  <td class="border border-slate-600 border-white">5th</td>
+                </tr>
+                <tr>
+                  <td class="border border-slate-600 border-white">2007</td>
+                  <td class="border border-slate-600 border-white">6</td>
+                  <td class="border border-slate-600 border-white">3rd</td>
+                </tr>
+                <tr>
+                  <td class="border border-slate-600 border-white">2008</td>
+                  <td class="border border-slate-600 border-white">7</td>
+                  <td class="border border-slate-600 border-white">2nd</td>
+                </tr>
+                <tr>
+                  <td class="border border-slate-600 border-white">2009</td>
+                  <td class="border border-slate-600 border-white">8</td>
+                  <td class="border border-slate-600 border-white">National Exam</td>
+                </tr>
+            </table>
+            </div>
+          </div>
+        </div>
+        <h2 class="text-4xl font-bold text-black px-5" id="cathe-two">Lideta Catholic Cathedral School (Second)</h2>
+        <div class="flex px-5">
+        <div class="grid md:flex lg:flex px-5">
+          <div class="py-5 w-full flex lg:w-2/3">
+            <div class="w-1/2">
               <img src="images/cathedral.jpg" alt="Lideta Catholic Cathedral School">
-              <p class="cathedral-second">
-                This is the second part of my life in Cathedral. I have met many amazing people in the second part of Cathedral. I love it all. Even my mistakes. If I can go back and change, I wouldn't change it for the world.
-              </p>
-              <div class="cathedral-table">
-                <table>
-                  <tr>
-                    <th>
-                      Year
-                    </th>
-                    <th>
-                      Grade
-                    </th>
-                    <th>
-                      Rank
-                    </th>
-                  </tr>
-                  <tr>
-                    <td>
-                      2010
-                    </td>
-                    <td>
-                      9
-                    </td>
-                    <td>
-                      5th
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      2011
-                    </td>
-                    <td>
-                      10
-                    </td>
-                    <td>
-                      National Exam
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      2012
-                    </td>
-                    <td>
-                      11
-                    </td>
-                    <td>
-                      Covid
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      2013
-                    </td>
-                    <td>
-                      12
-                    </td>
-                    <td>
-                      National Exam
-                    </td>
-                  </tr>
-                </table>
-              </div>
+            </div>
+            <div class="w-1/2">
+              <p>This is the second part of my life in Cathedral. I have met many amazing people in the second part of Cathedral. I love it all. Even my mistakes. If I can go back and change, I wouldn't change it for the world.</p>
             </div>
           </div>
-          <h3 id="photos">Photos</h3>
-          <div class="education-pictures">
-            <img src="images/education-10.jpg" alt="School Photos">
-            <img src="images/education-2.jpg" alt="School Photos">
-            <img src="images/education-3.jpg" alt="School Photos">
-            <img src="images/education-4.jpg" alt="School Photos">
-            <img src="images/education-5.jpg" alt="School Photos">
-            <img src="images/education-6.jpg" alt="School Photos">
-            <img src="images/education-7.jpg" alt="School Photos">
-            <img src="images/education-8.jpg" alt="School Photos">
-            <img src="images/education-9.jpg" alt="School Photos">
+          <div class="w-full md:w-1/3">
+            <div class="w-1/3">
+              <table class="w-60 text-sm text-left">
+                <tr>
+                  <th class="border border-slate-600 border-white">Year</th>
+                  <th class="border border-slate-600 border-white">Grade</th>
+                  <th class="border border-slate-600 border-white">Rank</th>
+                </tr>
+                <tr>
+                  <td class="border border-slate-600 border-white">2010</td>
+                  <td class="border border-slate-600 border-white">9</td>
+                  <td class="border border-slate-600 border-white">5th</td>
+                </tr>
+                <tr>
+                  <td class="border border-slate-600 border-white">2011</td>
+                  <td class="border border-slate-600 border-white">10</td>
+                  <td class="border border-slate-600 border-white">National Exam</td>
+                </tr>
+                <tr>
+                  <td class="border border-slate-600 border-white">2012</td>
+                  <td class="border border-slate-600 border-white">11</td>
+                  <td class="border border-slate-600 border-white">Covid</td>
+                </tr>
+                <tr>
+                  <td class="border border-slate-600 border-white">2013</td>
+                  <td class="border border-slate-600 border-white">12</td>
+                  <td class="border border-slate-600 border-white">National Exam</td>
+                </tr>
+            </table>
+            </div>
           </div>
-    </main>
-    <br class="education-end">
-    <footer>
-      <div class="education-footer">
-        <h3>Contact Me</h3>
-          <img src="images/phone_icon.png" alt="icon">
-          <p>
-            +251-929-147-145
-          </p>
-          <img src="images/main_icon.png" alt="icon">
-          <p>
-            <a href="mailto:gedionmekbeb2@gmail.com">Email me</a>
-           </p>
-        <h3>Goto</h3>
-        <ul>
-          <li>
-            <a href="#olive">Olive</a>
-          </li>
-          <li>
-            <a href="#cathe">LCCS Elementary</a>
-          </li>
-          <li>
-            <a href="#cathe-two">LCCS High School</a>
-          </li>
-          <li>
-            <a href="#photos">Photos</a>
-          </li>
-        </ul>
+        </div>
+      </div>      
+        <div class="py-0" id="edu_pic">
+          <button id="back_button"><</button>
+          <div id="education-pictures" id="photos">
+            <div id="pictures_slide">
+              <span><img src="images/education-10.jpg" alt="School Photos" id="education-pictures__photo"></span>
+              <span><img src="images/education-2.jpg" alt="School Photos" id="education-pictures__photo"></span>
+              <span><img src="images/education-3.jpg" alt="School Photos" id="education-pictures__photo"></span>
+            </div>
+            <div id="experience_slide">
+              <span><img src="images/education-4.jpg" alt="School Photos" id="education-pictures__photo"></span>
+              <span><img src="images/education-5.jpg" alt="School Photos" id="education-pictures__photo"></span>
+              <span><img src="images/education-6.jpg" alt="School Photos" id="education-pictures__photo"></span>
+            </div>  
+            <div id="pictures_slide">  
+              <span><img src="images/education-7.jpg" alt="School Photos" id="education-pictures__photo"></span>
+              <span><img src="images/education-8.jpg" alt="School Photos" id="education-pictures__photo"></span>
+              <span><img src="images/education-9.jpg" alt="School Photos" id="education-pictures__photo"></span>
+            </div>
+          </div>  
+          <button id="next_button">></button>
+        </div>
+        <script>
+          let scrollContainer = document.querySelector(".education-pictures");
+      let back_button = document.getElementById("back_button");
+      let next_button = document.getElementById("next_button");
+
+      scrollContainer.addEventListener("wheel", (evt) => {
+        evt.preventDefault();
+        scrollContainer.scrollLeft += evt.deltaY;
+        scrollContainer.style.scrollBehaviour = "auto";
+      });
+
+      next_button.addEventListener("click", ()=> {
+        scrollContainer.style.scrollBehaviour = "smooth";
+        scrollContainer.scrollLeft += 900;
+      });
+
+      back_button.addEventListener("click", ()=>{
+        scrollContainer.style.scrollBehaviour = "smooth";
+        scrollContainer.scrollLeft -= 900;
+      });
+        </script>
+  </main>
+  <br class="education-end">
+  <div class="flex">
+    <div class="w-1/2 px-5">
+      <h2 class="text-4xl font-bold">Contact Me</h2>
+      <div class="flex">
+        <img class="w-10 h-10 w-1/2" src="images/phone_icon.png" alt="Icon">                  
+        <p class="w-1/2 py-2 px-2">+251-929-147-145</p>
       </div>
-    </footer>
+      <div class="flex">
+        <img class="w-10 h-10" src="images/main_icon.png" alt="Icon">
+        <p class="py-2 px-2"><a class="text-black" href="mailto:gedionmekbeb2@gmail.com">Email me</a></p>
+      </div>
+    </div>
+    <div class="w-1/2 px-5">
+      <h3 class="text-4xl font-bold">Goto</h3>
+      <ul class="px-3">
+        <li><a class="text-black" href="#olive">Olive</a></li>
+        <li><a class="text-black" href="#cathe">LCCS Elementary</a></li>
+        <li><a class="has-text-black" href="#cathe-two">LCCS High School</a></li>
+        <li><a class="text-black" href="#photos">Photos</a></li>
+      </ul>                  
+    </div>
+  </div>
+</body>
 </html>
